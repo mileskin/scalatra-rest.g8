@@ -14,7 +14,7 @@ Template SBT project with Scalatra, lift-json and Specs2.
 
 * Start Jetty server:
 
-    console:start
+    container:start
 
 3. Open [http://localhost:8080/users/1](http://localhost:8080/users/1)
 
