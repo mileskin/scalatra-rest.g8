@@ -14,7 +14,7 @@ Template Scala SBT project with Scalatra, lift-json and Specs2.
 
 * Read more instructions from the documentation:
 
-    `vim README.md`
+    `vim README.md` or [online version](https://github.com/mileskin/scalatra-rest.g8/blob/master/src/main/g8/README.md)
 
 * Have fun and don't forget to [follow me on twitter](http://twitter.com/mileskin)!
 
