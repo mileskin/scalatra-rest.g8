@@ -6,15 +6,15 @@ Template SBT project with Scalatra, lift-json and Specs2.
 
 * Launch [SBT](http://code.google.com/p/simple-build-tool):
 
-    sbt
+    `sbt`
 
 * (optionally) generate IDEA configuration:
 
-    gen-idea
+    `gen-idea`
 
 * Start Jetty server:
 
-    container:start
+    `container:start`
 
 3. Open [http://localhost:8080/users/1](http://localhost:8080/users/1)
 
