@@ -11,6 +11,7 @@ seq(webSettings :_*)
 libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % "2.0.1",
   "org.scalatra" %% "scalatra-scalate" % "2.0.1",
+  "org.scalatra" %% "scalatra-specs2" % "2.0.1",
   "net.liftweb" %% "lift-json" % "2.4-M4",
   "org.specs2" %% "specs2" % "1.6.1" % "test",
   "org.specs2" %% "specs2-scalaz-core" % "6.0.1" % "test",
