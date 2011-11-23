@@ -5,6 +5,7 @@ import org.scalatra.test.specs2.MutableScalatraSpec
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
 
 class FunctionalSpec extends MutableScalatraSpec {
+  // sequential is required if your service is anyhow stateful
   args(sequential=true)
   addServlet(new RestServlet, "/*")
 
