@@ -12,6 +12,10 @@ Launch [SBT](https://github.com/harrah/xsbt/wiki) (embedded in project):
 
     gen-idea
 
+Run tests
+
+    ~test
+
 Start Jetty server so that it boots after each source file change:
 
     ~;container:start; container:reload /
