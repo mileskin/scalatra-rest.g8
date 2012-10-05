@@ -23,5 +23,14 @@ class FunctionalSpec extends ScalatraSuite with WordSpec with JsonHelpers {
     }
   }
 
+  "on unexpected error" should {
+    "return general message with appropriate status code" in {
+      get("/error") {
+        status should equal (500)
+        body should equal ("""{"message":"Internal error."}""")
+      }
+    }
+  }
+
   def jsonResponse = json.parse(response.getContent)
 }

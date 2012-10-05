@@ -19,6 +19,19 @@ class RestServlet extends ScalatraServlet with ScalateSupport with JsonHelpers {
     1
   }
 
+  get("/error") {
+    throw new RuntimeException("oh noez")
+  }
+
+  error {
+    case e: Exception =>
+      // TODO: Use log instead of console
+      println("Unexpected error during http api call.", e)
+      status(500)
+      contentType = "application/json;charset=UTF-8"
+      compact(render(("message" -> "Internal error.")))
+  }
+
   notFound {
     contentType = "application/json;charset=UTF-8"
     status(404)
