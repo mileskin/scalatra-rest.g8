@@ -1,4 +1,4 @@
-organization := "spike"
+organization := "$organization$"
 
 name := "$name$"
 
