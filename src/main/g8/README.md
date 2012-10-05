@@ -1,23 +1,25 @@
 ## Summary
 
-Template SBT project with Scalatra, lift-json and Specs2.
+Scala SBT project with Scalatra, lift-json and ScalaTest.
 
 ## Setup
 
-* Launch [SBT](http://code.google.com/p/simple-build-tool):
+1. Launch [SBT](https://github.com/harrah/xsbt/wiki):
 
-    `sbt`
+    sbt
 
-* (optionally) generate IDEA configuration:
+2. (optionally) generate IDEA configuration:
 
-    `gen-idea`
+    gen-idea
 
-* Start Jetty server:
+3. Start Jetty server so that it boots after each source file change:
 
-    `container:start`
+    ~;container:start; container:reload /
 
-3. Open [http://localhost:8080/users/1](http://localhost:8080/users/1)
+4. Open http://localhost:8660/api/json/users/1 or
 
-4. Learn more about [Scalatra](http://www.scalatra.org/stable/book/) and
+    curl http://localhost:8660/api/json/users/1
+
+5. Learn more about [Scalatra](http://www.scalatra.org/stable/book/) and
    [lift-json](https://github.com/lift/lift/tree/master/framework/lift-base/lift-json/)
 
