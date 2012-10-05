@@ -17,7 +17,7 @@ class RestApiSpec extends ScalatraSuite with WordSpec with JsonHelpers {
 
   "post user" should {
     "return user id" in {
-      post("/user", """{"name":"john","age":30}""") {
+      post("/api/user", """{"name":"john","age":30}""") {
         body should equal ("1")
       }
     }

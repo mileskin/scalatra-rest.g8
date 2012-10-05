@@ -18,7 +18,7 @@ class RestApiServlet extends ScalatraServlet with ScalateSupport with JsonHelper
     }
   }
 
-  post("/user") {
+  post("/api/user") {
     val user = parse(request.body).extract[User]
     1
   }
