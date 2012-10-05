@@ -1,6 +1,6 @@
 ## Summary
 
-Template Scala SBT project with Scalatra, lift-json and Specs2.
+Template Scala SBT project with Scalatra, lift-json and ScalaTest.
 
 ## Installation
 
