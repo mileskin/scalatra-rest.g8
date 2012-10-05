@@ -3,6 +3,7 @@ package spike.scalatra
 import org.scalatra._
 import scalate.ScalateSupport
 import net.liftweb.json._
+import net.liftweb.json.JsonDSL._
 
 case class User(name: String, age: Int)
 
@@ -19,9 +20,8 @@ class RestServlet extends ScalatraServlet with ScalateSupport with JsonHelpers {
   }
 
   notFound {
-    findTemplate(requestPath) map { path =>
-      contentType = "text/html"
-      layoutTemplate(path)
-    } orElse serveStaticResource() getOrElse resourceNotFound()
+    contentType = "application/json;charset=UTF-8"
+    status(404)
+    compact(render(("message" -> "Not found.")))
   }
 }
