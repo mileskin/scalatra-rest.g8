@@ -4,7 +4,6 @@ import org.scalatra._
 import scalate.ScalateSupport
 import net.liftweb.json._
 import net.liftweb.json.JsonDSL._
-import net.liftweb.json.Serialization.{read, write}
 
 class RestServlet extends ScalatraServlet with ScalateSupport {
   get("/users/:id") {
@@ -15,9 +14,9 @@ class RestServlet extends ScalatraServlet with ScalateSupport {
 
   post("/users") {
     implicit val formats = DefaultFormats
-    case class User(name : String, age : Integer)
+    case class User(name: String, age: Int)
     val user = parse(request.body).extract[User]
-    write(new Integer(1))
+    1
   }
 
   notFound {

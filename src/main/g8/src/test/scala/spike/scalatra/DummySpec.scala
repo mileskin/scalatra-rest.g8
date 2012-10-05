@@ -1,11 +1,12 @@
 package spike.scalatra
 
-import org.specs2.mutable._
+import org.scalatra.test.scalatest.ScalatraSuite
+import org.scalatest.WordSpec
 
-class DummySpec extends Specification {
+class DummySpec extends ScalatraSuite with WordSpec {
   "any" should {
     "do something" in {
-      1 mustEqual 1
+      1 should equal (1)
     }
   }
 }

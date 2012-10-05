@@ -1,18 +1,15 @@
 package spike.scalatra
 
-import org.specs2.mutable._
-import org.scalatra.test.specs2.MutableScalatraSpec
-import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
+import org.scalatra.test.scalatest._
+import org.scalatest.WordSpec
 
-class FunctionalSpec extends MutableScalatraSpec {
-  // sequential is required if your service is stateful
-  args(sequential=true)
+class FunctionalSpec extends ScalatraSuite with WordSpec {
   addServlet(new RestServlet, "/*")
 
   "get user" should {
     "return user info" in {
       get("/users/1") {
-        body must_== """{"user":{"name":"John","age":30}}"""
+        body should equal ("""{"user":{"name":"John","age":30}}""")
       }
     }
   }
@@ -20,7 +17,7 @@ class FunctionalSpec extends MutableScalatraSpec {
   "post user" should {
     "return user id" in {
       post("/users", """{"name":"john","age":30}""") {
-        body must_== "1"
+        body should equal ("1")
       }
     }
   }

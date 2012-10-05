@@ -1,6 +1,8 @@
-libraryDependencies <+= sbtVersion(v => "com.github.siasia" %% "xsbt-web-plugin" % (v+"-0.2.7"))
+resolvers += Classpaths.typesafeResolver
 
-resolvers += "sbt-idea-repo" at "http://mpeltonen.github.com/maven/"
+libraryDependencies <+= sbtVersion(v => v match {
+  case x if (x.startsWith("0.12")) => "com.github.siasia" %% "xsbt-web-plugin" % "0.12.0-0.2.11.1"
+})
 
-addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "0.11.0")
+addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.1.0")
 
