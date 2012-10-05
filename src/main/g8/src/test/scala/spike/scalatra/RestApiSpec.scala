@@ -9,7 +9,7 @@ class RestApiSpec extends ScalatraSuite with WordSpec with JsonHelpers {
 
   "get user" should {
     "return user info" in {
-      get("/users/1") {
+      get("/api/json/users/1") {
         jsonResponse.extract[User].name should equal ("John")
       }
     }

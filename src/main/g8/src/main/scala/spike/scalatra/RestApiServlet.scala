@@ -8,7 +8,11 @@ import net.liftweb.json.JsonDSL._
 case class User(name: String, age: Int)
 
 class RestApiServlet extends ScalatraServlet with ScalateSupport with JsonHelpers {
-  get("/users/:id") {
+  before("/api/json/*") {
+    contentType = "application/json;charset=UTF-8"
+  }
+
+  get("/api/json/users/:id") {
     params("id") match {
       case "1" => Json(User("John", 30))
     }
