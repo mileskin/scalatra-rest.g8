@@ -1,8 +1,8 @@
 organization := "spike"
 
-name := "scalatra-rest"
+name := "$name$"
 
-version := "0.0.1-SNAPSHOT"
+version := "$version$"
 
 scalaVersion := "2.9.1"
 
