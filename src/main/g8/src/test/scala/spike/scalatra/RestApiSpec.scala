@@ -4,8 +4,8 @@ import org.scalatra.test.scalatest._
 import org.scalatest.WordSpec
 import net.liftweb.json
 
-class FunctionalSpec extends ScalatraSuite with WordSpec with JsonHelpers {
-  addServlet(new RestServlet, "/*")
+class RestApiSpec extends ScalatraSuite with WordSpec with JsonHelpers {
+  addServlet(new RestApiServlet, "/*")
 
   "get user" should {
     "return user info" in {
